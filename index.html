@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/responsive.css" />
   </head>
-  <body>
+
+  <body onload="init()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Quizy</span>
@@ -27,26 +28,32 @@
       <div class="card quiz_card">
         <img src="./assets/imgs/quiz_bg.png" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Question</h5>
+          <h5 class="card-title" id="questionText">Question</h5>
 
           <div class="card mb-2">
-            <div class="card-body">Answer</div>
+            <div class="card-body" id="answer_1">Answer</div>
           </div>
+
           <div class="card mb-2">
-            <div class="card-body">Answer</div>
+            <div class="card-body" id="answer_2">Answer</div>
           </div>
+
           <div class="card mb-2">
-            <div class="card-body">Answer</div>
+            <div class="card-body" id="answer_3">Answer</div>
           </div>
+
           <div class="card mb-2">
-            <div class="card-body">Answer</div>
+            <div class="card-body" id="answer_4">Answer</div>
           </div>
+
           <div class="question_footer">
-            <span><b>1</b> of <b>5</b> Questions</span>
+            <span><b>1</b> of <b id="all_questions"></b> Questions</span>
             <button class="btn btn-primary">Next Question</button>
           </div>
+
         </div>
       </div>
     </div>
   </body>
+  
 </html>

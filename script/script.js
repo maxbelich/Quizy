@@ -43,4 +43,65 @@ let questions = [
     answer_4: "Ends the function",
     right_answer: 3,
   },
+
+  {
+    question: "Which symbol is used for comments in JavaScript?",
+    answer_1: "//",
+    answer_2: "##",
+    answer_3: "<!-- -->",
+    answer_4: "**",
+    right_answer: 1,
+  },
+
+  {
+    question: "Which keyword creates a variable in JavaScript?",
+    answer_1: "make",
+    answer_2: "int",
+    answer_3: "let",
+    answer_4: "create",
+    right_answer: 3,
+  },
+
+  {
+    question: "What does CSS stand for?",
+    answer_1: "Creative Style Sheets",
+    answer_2: "Cascading Style Sheets",
+    answer_3: "Computer Styled Sections",
+    answer_4: "Colorful Style Syntax",
+    right_answer: 2,
+  },
+
+  {
+    question: "Which operator checks both value and type in JavaScript?",
+    answer_1: "=",
+    answer_2: "==",
+    answer_3: "!=",
+    answer_4: "===",
+    right_answer: 4,
+  },
+
+  {
+    question: "What is the result of 2 + '2' in JavaScript?",
+    answer_1: "4",
+    answer_2: "22",
+    answer_3: "NaN",
+    answer_4: "undefined",
+    right_answer: 2,
+  },
 ];
+
+let currentQuestion = 0;
+
+function init() {
+  document.getElementById("all_questions").innerHTML = questions.length;
+  showCurrentQuestion();
+}
+
+function showCurrentQuestion() {
+  let question = questions[currentQuestion];
+  document.getElementById("questionText").innerHTML = question["question"];
+  document.getElementById("answer_1").innerHTML = question["answer_1"];
+  document.getElementById("answer_2").innerHTML = question["answer_2"];
+  document.getElementById("answer_3").innerHTML = question["answer_3"];
+  document.getElementById("answer_4").innerHTML = question["answer_4"];
+}
