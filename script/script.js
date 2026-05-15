@@ -105,3 +105,18 @@ function showCurrentQuestion() {
   document.getElementById("answer_3").innerHTML = question["answer_3"];
   document.getElementById("answer_4").innerHTML = question["answer_4"];
 }
+
+function answer(selection) {
+  let question = questions[currentQuestion];
+  let selectedQuestionNumber = selection.slice(-1);
+
+  let rightAnswer = `answer_${question["right_answer"]}`;
+
+  if (selectedQuestionNumber == question["right_answer"]) {
+    document.getElementById(selection).parentNode.classList.add("bg-success");
+  } else {
+    document.getElementById(selection).parentNode.classList.add("bg-danger");
+    document.getElementById(rightAnswer).parentNode.classList.add("bg-success");
+  }
+}
+
